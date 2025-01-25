@@ -8,8 +8,10 @@ import { technologies } from "../constants";
 
 const Tech = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
+    <div className="hidden md:block">
+      <motion.div 
+        variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>My work </p>
         <h2 className={styles.sectionHeadText}>Technologies</h2>
       </motion.div>
@@ -21,7 +23,7 @@ const Tech = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

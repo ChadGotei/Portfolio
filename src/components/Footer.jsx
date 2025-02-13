@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-[#151030] text-white py-6 px-4 mt-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div>
-          <img src={logo} alt="logo" className="h-12 w-12" />
+          <img src={logo} alt="logo" className="h-12 w-12 hidden md:block" />
         </div>
 
         <div className="text-center md:text-left">

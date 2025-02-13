@@ -60,7 +60,7 @@ const Hero = () => {
                   See My Work
                 </button>
               </a>
-              <a href="#contact">
+              <a href="#socials">
                 <button className="border-2 border-white text-white py-3 px-6 rounded-full hover:bg-white hover:text-[#915eff] transition-all">
                   Get in Touch
                 </button>

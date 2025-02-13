@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { socials } from "../constants";
 import toast from "react-hot-toast";
 import copy from "copy-to-clipboard";
+import { phone } from "../assets";
 
 const Socials = () => {
   return (
@@ -19,28 +20,49 @@ const Socials = () => {
 
         <div className="md:mx-10 sm:mx-8 mx-6 md:mt-20 sm:mt-8 mt-10 flex flex-row md:gap-20 sm:gap-12 gap-10 justify-center items-center flex-wrap">
           {socials.map((social, index) => (
-            <SocialShape key={index} dir={"up"} {...social} />
+            <SocialShape key={index} {...social} />
           ))}
+
+          {/* for the Phone number */}
+          <div className="hidden sm:block">
+            <SocialShape
+              name="Phone no."
+              image={phone}
+              link={""}
+              cn="h-[2.78rem] w-[2.78rem] md:h-[5.7rem] md:w-[5.7rem] sm:h-[3rem] sm:w-[3rem]"
+              toCopy="+91 9315130205"
+            />
+          </div>
+
+          <div className="block sm:hidden">
+            <SocialShape
+              name="Phone no."
+              image={phone}
+              cn="h-[2.78rem] w-[2.78rem] md:h-[5.7rem] md:w-[5.7rem] sm:h-[3rem] sm:w-[3rem]"
+              toCopy="+91 9315130205"
+              link="tel:+91 9315130205"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const SocialShape = ({ dir, name, image, link, cn, toCopy }) => {
+const SocialShape = ({ name, image, link, cn, toCopy }) => {
   const handeCLick = () => {
     if (toCopy) {
       toast.success(`Copied ${name} to clipboard`, {
-        icon: "📋", 
+        icon: "📋",
         style: {
-          borderRadius: "10px", 
-          background: "#aaa6c3", 
-          color: "#100d25", 
-          padding: "1rem", 
-          fontWeight: "400"
+          borderRadius: "10px",
+          background: "#aaa6c3",
+          color: "#100d25",
+          padding: "1rem",
+          fontWeight: "400",
         },
-        duration: 1750, 
-        position: "bottom-center", 
+        duration: 1750,
+        position: "bottom-center",
       });
 
       copy(toCopy);

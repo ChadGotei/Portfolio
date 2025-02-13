@@ -24,9 +24,8 @@ import {
   snapgram,
   wildoasis,
   leetcode,
-  linkedin, 
+  linkedin,
   gmail,
-  phone, 
   instagram,
   github,
 } from "../assets";
@@ -195,7 +194,7 @@ const projects = [
       },
     ],
     image: wildoasis,
-    source_code_link: "https://github.com/ChadGotei/da-wild-oasis", 
+    source_code_link: "https://github.com/ChadGotei/da-wild-oasis",
     website_link: "https://da-wild-oasis.vercel.app/",
   },
   {
@@ -269,7 +268,7 @@ const projects = [
   {
     name: "Student Management System",
     description:
-     "Student Management System is a C++ project offering separate options for students and admins to manage and track student information efficiently.",
+      "Student Management System is a C++ project offering separate options for students and admins to manage and track student information efficiently.",
     tags: [
       {
         name: "c++",
@@ -305,7 +304,7 @@ const socials = [
     image: linkedin,
     cn: 'h-[5rem] w-[5rem] md:h-[10rem] md:w-[10rem] sm:h-[10rem] sm:w-[10rem]',
     toCopy: false,
-  }, 
+  },
 
   {
     name: "Gmail",
@@ -315,19 +314,12 @@ const socials = [
   },
 
   {
-    name: "Phone no",
-    image: phone,
-    cn: 'h-[2.78rem] w-[2.78rem] md:h-[5.7rem] md:w-[5.7rem] sm:h-[3rem] sm:w-[3rem]',
-    toCopy: "+91 9315130205",
-  },
-
-  {
     name: "Instagram",
     link: "https://www.instagram.com/gauravsharma10211/",
     image: instagram,
     cn: 'h-[4.5rem] w-[4.5rem] md:h-[10rem] md:w-[10rem] sm:h-[10rem] sm:w-[10rem]',
     toCopy: false,
-  }
+  },
 ];
 
 

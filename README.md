@@ -1,7 +1,8 @@
-# React + Vite
+# Portfolio Website 
 
 ## Tech Stack
 - React
+- Vite
 = Tailwind css
 - Framer motion
 

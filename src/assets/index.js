@@ -34,6 +34,7 @@ import aestroid from './projects/aestroid.png';
 import pizzaco from './projects/pizzasite.png';
 import snapgram from './projects/snapgram.png';
 import cppsms from './projects/sms.png'
+import fintracker from './projects/fintracker.png';
 
 // Socials section
 import instagram from './socials/insta.png';
@@ -75,6 +76,7 @@ export {
   cppsms,
   snapgram,
   wildoasis,
+  fintracker,
   vercel,
   gmail,
   leetcode,

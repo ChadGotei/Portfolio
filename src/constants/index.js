@@ -23,6 +23,7 @@ import {
   cppsms,
   snapgram,
   wildoasis,
+  fintracker,
   leetcode,
   linkedin,
   gmail,
@@ -264,6 +265,32 @@ const projects = [
     ],
     image: snapgram,
     source_code_link: "https://github.com/ChadGotei/snapgram",
+  },
+  {
+    name: "FinTracker",
+    description:
+      "It is a personal finance tracking website, it has features such as add transaction, edit and perform all sorts of CRUD operations. It is built using MERN stack. Its a full stack project, backend deployed on render and frontend on vercel.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express",
+        color: "black-gradiennt",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: fintracker, // to be edited
+    source_code_link: "https://github.com/ChadGotei/finance-tracker",
+    website_link: "https://finance-tracker-w7xu.vercel.app/",
   },
   {
     name: "Student Management System",

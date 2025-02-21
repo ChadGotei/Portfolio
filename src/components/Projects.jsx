@@ -68,20 +68,21 @@ const ProjectCard = ({
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-1">
-            <div
+            {/* OLD VERSION, might add this back so keeping it here */}
+            {/* <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
             >
               <img src={github} className="w-1/2 h-1/2 object-contain" />
-            </div>
-            {website_link && (
+            </div> */}
+            {/* {website_link && (
               <div
                 onClick={() => window.open(website_link, "_blank")}
                 className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
               >
                 <img src={vercel} className="w-1/2 h-1/2 object-contain" />
               </div>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -98,6 +99,49 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
+
+      {/* Links Section */}
+      <div
+        className="mt-4 flex flex-col bg-tertiary rounded-lg px-2 hover:scale-105
+      transition-all hover:cursor-pointer"
+      >
+        <div className="flex items-center gap-3 p-2 rounded-lg">
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            className="bg-gray-800 hover:bg-gray-700 transition-colors w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
+          >
+            <img src={github} className="w-1/2 h-1/2 object-contain hover:animate-pulse" />
+          </div>
+          <p
+            onClick={() => window.open(source_code_link, "_blank")}
+            className="text-white text-sm cursor-pointer hover:underline"
+          >
+            Source Code Link
+          </p>
+        </div>
+
+        <hr
+          className={`${
+            website_link ? "block" : "hidden"
+          } border-t-2 border-primary`}
+        />
+        {website_link && (
+          <div className="flex items-center gap-3 p-2 rounded-lg">
+            <div
+              onClick={() => window.open(website_link, "_blank")}
+              className="bg-gray-800 hover:bg-gray-700 transition-colors w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
+            >
+              <img src={vercel} className="w-1/2 h-1/2 object-contain hover:animate-pulse" />
+            </div>
+            <p
+              onClick={() => window.open(website_link, "_blank")}
+              className="text-white text-sm cursor-pointer hover:underline"
+            >
+              Website Link
+            </p>
+          </div>
+        )}
+      </div>
     </motion.div>
   );
 };

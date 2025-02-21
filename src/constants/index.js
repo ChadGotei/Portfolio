@@ -20,7 +20,6 @@ import {
   threejs,
   pizzaco,
   aestroid,
-  cppsms,
   snapgram,
   wildoasis,
   fintracker,
@@ -29,6 +28,7 @@ import {
   gmail,
   instagram,
   github,
+  reactquiz,
 } from "../assets";
 
 export const navLinks = [
@@ -199,27 +199,6 @@ const projects = [
     website_link: "https://da-wild-oasis.vercel.app/",
   },
   {
-    name: "React Pizza Co.",
-    description:
-      "React Pizza Co. is a pizza ordering website with a simple UI, showcasing the use of Redux for efficient state management in a seamless ordering experience.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "redux",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: pizzaco,
-    source_code_link: "https://github.com/ChadGotei/fast-pizza-react",
-  },
-  {
     name: "Aestroid",
     description:
       "Aestroid is an anime browsing website built with Vanilla JavaScript, allowing users to explore, bookmark, and manage their favorite anime for easy access and a personalized experience.",
@@ -242,29 +221,26 @@ const projects = [
     website_link: "https://aestroidv1.netlify.app/",
   },
   {
-    name: "Snapgram",
+    name: "React Quiz",
     description:
-      "Snapgram is a social media application built with React and Zustand, offering authentication, posting, and basic social media features like following and commenting for a seamless user experience.",
+      "Made this react quiz using vite + react along with local database using indexedDB. Its a simple project which can also be used as template, one just need to change the questions which is quite simple to do.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "tanstack",
+        name: "shadcn",
         color: "green-text-gradient",
       },
       {
-        name: "zustand",
-        color: "black-gradiennt",
-      },
-      {
-        name: "appwrite",
+        name: "indexedDB",
         color: "pink-text-gradient",
       },
     ],
-    image: snapgram,
-    source_code_link: "https://github.com/ChadGotei/snapgram",
+    image: reactquiz,
+    source_code_link: "https://github.com/ChadGotei/react-quiz-2",
+    website_link: "https://react-quiz-v1.vercel.app/",
   },
   {
     name: "FinTracker",
@@ -293,19 +269,51 @@ const projects = [
     website_link: "https://finance-tracker-w7xu.vercel.app/",
   },
   {
-    name: "Student Management System",
+    name: "React Pizza Co.",
     description:
-      "Student Management System is a C++ project offering separate options for students and admins to manage and track student information efficiently.",
+      "React Pizza Co. is a pizza ordering website with a simple UI, showcasing the use of Redux for efficient state management in a seamless ordering experience.",
     tags: [
       {
-        name: "c++",
+        name: "react",
         color: "blue-text-gradient",
       },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
     ],
-    image: cppsms,
-    source_code_link: "https://github.com/ChadGotei/SMS",
+    image: pizzaco,
+    source_code_link: "https://github.com/ChadGotei/fast-pizza-react",
   },
-
+  {
+    name: "Snapgram",
+    description:
+      "Snapgram is a social media application built with React and Zustand, offering authentication, posting, and basic social media features like following and commenting for a seamless user experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tanstack",
+        color: "green-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "black-gradiennt",
+      },
+      {
+        name: "appwrite",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: snapgram,
+    source_code_link: "https://github.com/ChadGotei/snapgram",
+  },
 ];
 
 const socials = [

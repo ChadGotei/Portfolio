@@ -55,9 +55,12 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="mt-6 flex gap-4">
-              <a href="#projects">
-                <button className="bg-[#915eff] text-white py-3 px-6 rounded-full shadow-lg hover:shadow-purple-500/50 hover:bg-purple-800 transition-all">
-                  See My Work
+              <a 
+                target="_blank"
+                href="https://drive.google.com/file/d/1bhGH4FBtXmjB5sPwDIr9BrDLp2N2GEDA/view"
+              >
+                <button className="border-2 border-white hover:text-white py-3 px-6 rounded-full bg-white text-[#915eff] transition-all hover:bg-transparent">
+                  Resume
                 </button>
               </a>
               <a href="#socials">
@@ -67,7 +70,12 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <img src={profile2} height={400} width={400} className="hidden md:block"/>
+          <img
+            src={profile2}
+            height={400}
+            width={400}
+            className="hidden md:block"
+          />
         </div>
       </div>
 

@@ -20,6 +20,7 @@ import {
   threejs,
   pizzaco,
   aestroid,
+  nextcare,
   snapgram,
   wildoasis,
   fintracker,
@@ -219,6 +220,28 @@ const projects = [
     image: aestroid,
     source_code_link: "https://github.com/ChadGotei/Aestroid",
     website_link: "https://aestroidv1.netlify.app/",
+  },
+  {
+    name: "NextCare",
+    description:
+      "NextCare is a patient management system where patients can book appointments and create profiles. The admin panel, secured by a passcode (123456), handles appointment scheduling.",
+    tags: [
+      { 
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "shadcn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "appwrite",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nextcare,
+    source_code_link: "https://github.com/ChadGotei/NextCare",
+    website_link: "https://next-care.vercel.app/",
   },
   {
     name: "React Quiz",

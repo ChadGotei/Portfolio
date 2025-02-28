@@ -35,6 +35,7 @@ import pizzaco from './projects/pizzasite.png';
 import snapgram from './projects/snapgram.png';
 import fintracker from './projects/fintracker.png';
 import reactquiz from './projects/reactquiz.png';
+import nextcare from './projects/nextcare.png';
 
 // Socials section
 import instagram from './socials/insta.png';
@@ -76,6 +77,7 @@ export {
   snapgram,
   wildoasis,
   reactquiz,
+  nextcare,
   fintracker,
   vercel,
   gmail,

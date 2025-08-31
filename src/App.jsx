@@ -2,14 +2,15 @@ import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import {
   About,
-  Experience,
   Socials,
   Hero,
   Navbar,
   Tech,
   Works,
   Footer,
+  Academic,
 } from "./components";
+import Experience from "./components/Experience";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         </div>
         <About />
         <Experience />
+        <Academic />
         <Tech />
         <Works />
         <Socials />

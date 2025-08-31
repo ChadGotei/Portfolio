@@ -1,85 +1,104 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
-import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
+import { textVariant, fadeIn } from "../utils/motion";
+import { internship } from "../constants"; 
 
 const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Academic Highlights</h2>
+        <p className={styles.sectionSubText}>Where I’ve worked</p>
+        <h2 className={styles.sectionHeadText}>Experience</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <motion.div
+        variants={fadeIn("", "", 0.15, 1)}
+        className="mt-10 bg-black-100 rounded-[20px] p-6 sm:p-8 border border-white/10"
+      >
+        <div className="flex items-start gap-5">
+          {/* icon / logo */}
+          {internship.icon && (
+            <div
+              className="shrink-0 w-14 h-14 rounded-xl flex items-center justify-center"
+              style={{ background: internship.iconBg || "#151030" }}
+            >
+              <img
+                src={internship.icon}
+                alt={internship.company}
+                className="w-3/4 h-3/4 object-contain"
+                loading="lazy"
+              />
+            </div>
+          )}
+
+          {/* header */}
+          <div className="flex-1">
+            <div className="flex flex-wrap items-baseline gap-2">
+              <h3 className="text-white text-[22px] sm:text-[24px] font-bold leading-tight">
+                {internship.title}
+              </h3>
+              <span className="text-secondary text-[14px]">•</span>
+              <p className="text-secondary text-[14px] font-medium">
+                {internship.company}
+              </p>
+            </div>
+
+            <div className="mt-1 text-secondary text-[12px] sm:text-[13px]">
+              <span>{internship.date}</span>
+              {internship.location ? <span> • {internship.location}</span> : null}
+              {internship.type ? <span> • {internship.type}</span> : null}
+            </div>
+
+            {/* tech stack tags */}
+            {Array.isArray(internship.stack) && internship.stack.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {internship.stack.map((t) => (
+                  <span
+                    key={t}
+                    className="text-[12px] px-2 py-1 rounded-md bg-black-200/60 border border-white/10"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* bullets */}
+            {Array.isArray(internship.points) && internship.points.length > 0 && (
+              <ul className="mt-4 list-disc ml-5 space-y-2">
+                {internship.points.map((p, i) => (
+                  <li
+                    key={`intern-point-${i}`}
+                    className="text-white-100 text-[14px] tracking-wider"
+                  >
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {/* links */}
+            {(internship.links?.length ?? 0) > 0 && (
+              <div className="mt-5 flex flex-wrap gap-3">
+                {internship.links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[13px] px-3 py-1.5 rounded-md border border-primary/50 bg-tertiary/60 hover:bg-tertiary transition"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };
 
-const ExperienceCard = ({ experience }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "linear-gradient(135deg, #1d1836 0%, #232631 100%)",
-        color: "#fff",
-        borderRadius: "10px",
-        boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid #232631" }}
-      date={experience.date}
-      iconStyle={{
-        background: experience.iconBg,
-        boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.2)",
-      }}
-      icon={
-        <div className="flex items-center justify-center w-full h-full">
-          <img
-            src={experience.icon}
-            alt={experience.board}
-            className="w-[60%] h-[60%] object-contain cursor-pointer transition-transform hover:scale-110"
-          />
-        </div>
-      }
-    >
-      <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.board}
-        </p>
-      </motion.div>
-
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <motion.li
-            key={`experience-point${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.2 }}
-          >
-            {point}
-          </motion.li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  );
-};
-
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "experience");

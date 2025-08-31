@@ -2,7 +2,7 @@ import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
 import Tech from './Tech';
-import Experience from './Experience';
+import Academic from './Academic';
 import Works from './Projects';
 import Socials from './Socials';
 import Footer from './Footer';
@@ -12,7 +12,7 @@ export {
   Navbar,
   About,
   Tech,
-  Experience,
+  Academic,
   Works,
   Socials,
   Footer,

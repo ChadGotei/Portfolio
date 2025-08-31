@@ -38,7 +38,11 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
+    id: "experience",
+    title: "Experience"
+  },
+  {
+    id: "academic",
     title: "Academic",
   },
   {
@@ -138,18 +142,7 @@ const technologies = [
   },
 ];
 
-const experiences = [
-  {
-    title: "10th",
-    Board: "CBSE",
-    icon: cbse,
-    iconBg: "#383E56",
-    date: "March 2020",
-    points: [
-      "Completed my 10th from CBSE board at SBM Sr. Sec. School",
-      "Achieved a percentage of 84.4%",
-    ],
-  },
+const academics = [
   {
     title: "12th",
     Board: "CBSE",
@@ -167,9 +160,9 @@ const experiences = [
     Board: "DSEU",
     icon: dseu,
     iconBg: "#383E56",
-    date: "Dec 2022 - ongoing",
+    date: "2022 - 2025",
     points: [
-      "Currently pursuing a Bachelor of Computer Applications (BCA) from DSEU Ambedkar Shakarpur I",
+      "Bachelor of Computer Applications (BCA) from DSEU Ambedkar Shakarpur I",
       "Maintaining a CGPA above 8.5 so far",
       "Have studied core low-level languages such as C++ and Java, among others",
     ],
@@ -226,7 +219,7 @@ const projects = [
     description:
       "NextCare is a patient management system where patients can book appointments and create profiles. The admin panel, secured by a passcode (123456), handles appointment scheduling.",
     tags: [
-      { 
+      {
         name: "nextjs",
         color: "blue-text-gradient",
       },
@@ -381,4 +374,29 @@ const socials = [
 ];
 
 
-export { services, technologies, experiences, projects, socials };
+const internship = {
+  title: "Fullstack Development Intern",
+  company: "IT Department, DSEU",
+  date: "Mar 2025 – Present",
+  location: "Delhi, India (On-site)",
+  type: "Internship",
+  icon: dseu, 
+  iconBg: "#232631",
+  stack: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "TanStack Query", "Figma", "Git"],
+  points: [
+    "Contributing to the official website of Delhi Skills and Entrepreneurship University: https://dseu.ac.in",
+    "Collaborated closely with a small team to build and enhance the platform.",
+    "Owned design and development of the admin dashboard for uploading and managing PDFs across various sections of the website.",
+    "Built scalable components using React.js, styled with Tailwind CSS, integrated APIs, and implemented caching with TanStack Query.",
+    "Developed and maintained backend functionality using Node.js and MongoDB, including RESTful APIs and reliable database operations.",
+    "Assisted designers with Figma prototypes, ensuring accurate implementation and contributing to design iterations.",
+    "Used Git for version control to maintain code integrity across updates.",
+  ],
+  links: [
+    { label: "DSEU Website", href: "https://dseu.ac.in" },
+  ],
+};
+
+
+
+export { services, technologies, academics, projects, socials, internship };  

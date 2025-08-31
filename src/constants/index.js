@@ -36,22 +36,28 @@ export const navLinks = [
   {
     id: "about",
     title: "About",
+    dest: "#about"
   },
   {
     id: "experience",
-    title: "Experience"
+    title: "Experience",
+    dest: "#experience"
   },
   {
     id: "academic",
     title: "Academic",
+    dest: "#academic",
   },
   {
     id: "projects",
-    title: "Projects"
+    title: "Projects",
+    dest: "#projects",
+    // seperatePage: true
   },
   {
     id: "socials",
     title: "Contact",
+    dest: "#socials"
   },
 ];
 
